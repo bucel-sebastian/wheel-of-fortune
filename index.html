@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="https://threejs.org/build/three.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/20.0.0/tween.umd.js"></script> -->
+  </head>
+  <body>
+    <!-- <div class="container">
+      <div class="wheel" id="wheel">
+        <div class="segment" data-value="sugus" style="--i: 1; --clr: #db7093">
+          <span> Bomboane Sugus </span>
+        </div>
+        <div class="segment" data-value="papi" style="--i: 2; --clr: #20b2aa">
+          <span> Bomboane Papi </span>
+        </div>
+        <div class="segment" data-value="emag" style="--i: 3; --clr: #d63e92">
+          <span> Voucher emag </span>
+        </div>
+        <div
+          class="segment"
+          data-value="tryAgain"
+          style="--i: 4; --clr: #daa520"
+        >
+          <span> Voucher emag </span>
+        </div>
+        <div class="segment" data-value="sugus" style="--i: 5; --clr: #db7093">
+          Bomboane Sugus
+        </div>
+        <div class="segment" data-value="papi" style="--i: 6; --clr: #20b2aa">
+          <span> Bomboane Papi </span>
+        </div>
+        <div class="segment" data-value="emag" style="--i: 7; --clr: #d63e92">
+          <span> Voucher emag </span>
+        </div>
+        <div
+          class="segment"
+          data-value="tryAgain"
+          style="--i: 8; --clr: #daa520"
+        >
+          <span> Voucher emag </span>
+        </div>
+      </div>
+    </div> -->
+    <div>
+      <p>Data - <span id="repart-data-date"></span></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Nume</th>
+            <th>Cantitate alocata - Cantiate ramasa</th>
+            <th>Rezerve alocate - Rezerve ramase</th>
+            <th>Probabilitate</th>
+          </tr>
+        </thead>
+        <tbody id="repart-prizes"></tbody>
+      </table>
+    </div>
+    <div id="campaign-step-0" style="display: none">
+      <h1>Esti inafara Perioadei de campanie</h1>
+    </div>
+    <div id="campaign-step-1" style="display: none">
+      <form id="campaign-form" class="campaign-form">
+        <div class="input-container input-container-text">
+          <label class="input-label-text">Numele si prenumele*</label>
+          <input class="input-text" type="text" name="name" required />
+        </div>
+        <div class="input-container input-container-text">
+          <label class="input-label-text">Adresa de email*</label>
+          <input class="input-text" type="email" name="email" required />
+        </div>
+        <div class="input-container input-container-text">
+          <label class="input-label-text">Numarul de telefon*</label>
+          <input
+            class="input-text"
+            type="tel"
+            name="phone"
+            minlength="9"
+            required
+          />
+        </div>
+        <div class="input-container-checkbox">
+          <label class="input-label-checkbox">
+            <input class="input-checkbox" type="checkbox" name="tc" required />
+            Sunt de acord cu termenii si conditiile
+          </label>
+        </div>
+        <div class="button-container">
+          <button type="submit" class="form-submit-button">Inscrie-te</button>
+        </div>
+      </form>
+    </div>
+    <div id="campaign-step-2">
+      <div class="campaign-step-container">
+        <div id="wheel-after-text" class="wheel-after-text">
+          <div class="wheel-after-text-box">
+            <div
+              id="wheel-after-text-won"
+              class="wheel-after-text-won"
+              style="display: none"
+            >
+              <h2>Felicitări!</h2>
+              <h3>
+                Ai câștigat premiul zilei. Te rugăm să ne contactezi la adresa
+                de e-mail
+                <a href="mailto:contact@sugus.ro">contact@sugus.ro</a>
+                pentru a ne trimite datele complete de livrare.
+              </h3>
+            </div>
+            <div
+              id="wheel-after-text-loose"
+              class="wheel-after-text-loose"
+              style="display: none"
+            >
+              <h2>Ne pare rău...</h2>
+              <h3>Te așteptăm și mâine pentru o nouă șansă de câștig!</h3>
+            </div>
+          </div>
+        </div>
+        <div class="wheel-container" id="wheel-container">
+          <div class="wheel-image">
+            <div id="wheel-canvas" class="wheel-canvas"></div>
+            <img
+              src="/wheel-of-fortune/img/wheel_border.svg"
+              class="wheel-custom-border"
+            />
+            <img
+              src="/wheel-of-fortune/img/wheel_pin.svg"
+              class="wheel-custom-pin"
+            />
+            <img
+              src="/wheel-of-fortune/img/wheel_button.svg"
+              class="wheel-custom-button"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="/wheel-of-fortune/WheelGame.js" type="module"></script> -->
+    <script src="/wheel-of-fortune/script.js" type="module"></script>
+  </body>
+</html>
